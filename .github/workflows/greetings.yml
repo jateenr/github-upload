@@ -1,9 +1,7 @@
 name: Greetings
 
-#on: [pull_request, issues]
-on:
-  schedule:
-    - cron: '4 5 6 5 5'
+on: [pull_request, issues]
+
 jobs:
   greeting:
     runs-on: windows-latest
