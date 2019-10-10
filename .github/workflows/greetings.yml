@@ -1,6 +1,11 @@
 name: Greetings
 
-on: [pull_request, issues, commit_comment, label]
+on: # [pull_request, issues,push]
+  push:
+   branches:
+      - master
+      - test
+  
 
 jobs:
   greeting:
