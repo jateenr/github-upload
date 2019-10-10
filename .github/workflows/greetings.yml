@@ -1,10 +1,14 @@
 name: Greetings
 
-on: [pull_request, issues]
-
+#on: [pull_request, issues]
+on:
+  schedule:
+    - cron: '4 5 6 5 5'
 jobs:
   greeting:
     runs-on: windows-latest
+    
+
     steps:
       # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
       - name: Hello world
@@ -14,4 +18,13 @@ jobs:
         id: hello
       # This step prints an output (time) from the previous step's action.
       - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+        run: 
+         echo 'The time was ${{ steps.hello.outputs.time }}.'
+         echo 'Hello World'
+        
+        env:
+          FIRST_NAME: Mona
+          middle_name: The
+          Last_Name: Octocat
+       
+        
