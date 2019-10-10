@@ -22,8 +22,8 @@ jobs:
       # This step prints an output (time) from the previous step's action.
       - name: Echo the greeting's time
         run: 
-         echo 'The time was ${{ steps.hello.outputs.time }}.\br'
-         echo Hello World $FIRST_NAME $middle_name $Last_Name!        
+         echo The time was ${{ steps.hello.outputs.time }}.
+              Hello World $FIRST_NAME $middle_name $Last_Name!        
         env:
           FIRST_NAME: Mona
           middle_name: The
